@@ -1,0 +1,9 @@
+@import url("header.css");
+@import url("dice-ip.css");
+
+
+:root {
+    --very-dark-gray: hsl(0, 0%, 17%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
