@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,40 +9,44 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
-     crossorigin=""/>
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
   <title>IP Address Tracker</title>
   <link rel="stylesheet" href="./assets/css/normalize.css">
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
+
 <body>
   <header class="header">
     <h1 class="header__title">IP Address Tracker</h1>
-    <input type="search" name="ip" id="ip" placeholder="Search for any IP address or domain">
+    <form action="">
+      <input class="header__search" type="search" name="ip" id="ip" placeholder="Search for any IP address or domain" >
+      <button class="header__button"><img src="./assets/img/icon-arrow.svg" alt="" class="button__img"></button>
+    </form>
   </header>
-  
+
   <main>
-    <section class="dice-ip">
-      <table>
-        <thead>
-          <tr>
-            <th>IP ADDRESS</th>
-            <th>LOCATION</th>
-            <th>TIMEZONE</th>
-            <th>ISP</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="">1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-          </tr>
-        </tbody>
-      </table>      
+    <section class="result">
+      <div class="result__ip">
+        <h2 class="ip__titulo">IP ADDRESS</h2>
+        <p class="ip_return"></p>  
+      </div>
+
+      <div class="result__location">
+        <h2 class="location__titulo">LOCATION</h2>
+        <p class="location_return"></p>  
+      </div>
+      
+      <div class="result__timezone">
+        <h2 class="timezone__titulo">TIMEZONE</h2>
+        <p class="timezone_return"></p>  
+      </div>
+
+      <div class="result__isp">
+        <h2 class="isp__titulo">ISP</h2>
+        <p class="isp_return"></p>  
+      </div>
 
     </section>
     <section class="map">
@@ -50,20 +55,14 @@
   </main>
 
   <footer class="attribution">
-    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Fabricio Velasco</a>.</p>
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Fabricio Velasco</a>.</p>
   </footer>
-  
- <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
- integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
- crossorigin=""></script>
- <script src="/assets/js/index.js"></script>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <script src="/assets/js/index.js"></script>
 </body>
+
 </html>
 
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
-  

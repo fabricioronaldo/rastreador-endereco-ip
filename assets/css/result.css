@@ -1,0 +1,29 @@
+.result {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2em;
+    width: 80%;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    top:225px;
+    
+    left:;
+    right:10%;
+    position: absolute;
+    z-index: 1000;
+}
+
+.ip__titulo,.location__titulo,.timezone__titulo,.isp__titulo {
+    color: darkgray;
+    font-size: 0.8em;
+}  
+
+.result__ip,.result__titulo,.result__location,.result__timezone,.result__isp {
+    text-align: center;
+    width: 100%;
+    border-right: 2px solid darkgrey;
+}
+.result__isp {
+    border-right: none;
+}
