@@ -17,13 +17,29 @@
 .ip__titulo,.location__titulo,.timezone__titulo,.isp__titulo {
     color: darkgray;
     font-size: 0.8em;
+    padding-bottom: 0.5em;
 }  
 
 .result__ip,.result__titulo,.result__location,.result__timezone,.result__isp {
     text-align: center;
     width: 100%;
     border-right: 2px solid darkgrey;
+    padding: 0.5em 0; 
 }
 .result__isp {
     border-right: none;
+}
+
+
+@media screen and (max-width: 390px) {
+    .result {
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+    }
+
+    .result__ip,.result__titulo,.result__location,.result__timezone,.result__isp {
+        border: none;
+
+    }
 }

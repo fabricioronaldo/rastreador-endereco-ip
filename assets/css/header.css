@@ -33,3 +33,13 @@
     
 }
 
+@media screen and (max-width: 390px) {
+    .header__title {
+        font-size: 1.3em;
+        font-weight: 500;
+    }
+
+    .header__search {
+        width: 65%;
+    }
+}
