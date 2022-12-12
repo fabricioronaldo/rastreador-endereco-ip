@@ -1,7 +1,7 @@
 /*API LeafletJS*/
-var map = L.map('map').setView([51.505, -0.09], 13);
-var marker = L.marker([51.5, -0.09]).addTo(map);
-
+/*var map = L.map('map').setView([-22.88333, -43.10361], 13);
+var marker = L.marker([-22.88333, -43.10361]).addTo(map);
+var teste = "ssss";
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -10,10 +10,10 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
 
-/*API IP Geolocation API */
+/*API IP Geolocation API 
 
     var ip = "138.117.54.4";
-    var api_key = "";
+    var api_key = "at_ycQeForGoXHTrty2ERE46JTJ2VmnP";
     
     $(function () {
        $.ajax({
@@ -23,4 +23,47 @@ marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
                $("footer").append("<pre>"+ JSON.stringify(data,"",2)+"</pre>");
            }
        });
-    });
+    });*/
+ 
+    
+    
+    var api_key = "at_ycQeForGoXHTrty2ERE46JTJ2VmnP";
+    
+
+    $(function () {
+        $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+            );
+
+        $.ajax({
+            url: "https://geo.ipify.org/api/v1",
+            data: {apiKey: api_key, ipAddress: JSON.ip},
+            success: function(data) {
+              
+                a = JSON.stringify(data,"",2);
+                b = JSON.parse(a);
+                console.log(a);
+                console.log(b);
+                $("#ip_return").append(b.ip);
+                $("#location_return").append(b.location.region);
+                $("#timezone_return").append(b.location.timezone);
+                $("#isp_return").append(b.isp);
+              
+                map = L.map('map').setView([b.location.lat, b.location.lng], 13);
+                marker = L.marker([b.location.lat, b.location.lng]).addTo(map);
+              
+                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                }).addTo(map);
+            
+                marker.bindPopup("<b>" + b.location.city + "</b><br>" + b.as.domain).openPopup();             
+
+            }
+
+        });
+});
+
+
+
+
+
