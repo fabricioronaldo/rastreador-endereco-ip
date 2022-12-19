@@ -30,8 +30,12 @@
     border-right: none;
 }
 
+span {
+    font-size: 1em;
+}
 
-@media screen and (max-width: 390px) {
+
+@media screen and (max-width: 600px) {
     .result {
         display: flex;
         flex-direction: column;
@@ -41,5 +45,17 @@
     .result__ip,.result__titulo,.result__location,.result__timezone,.result__isp {
         border: none;
 
+    }
+}
+
+@media screen and (min-width: 600px) {
+    span {
+        font-size: .7em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    span {
+        font-size: .8em;
     }
 }
